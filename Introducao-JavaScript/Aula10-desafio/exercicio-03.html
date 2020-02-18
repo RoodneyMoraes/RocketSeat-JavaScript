@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // VARIAVEL
+        let skill = "Javascript";
+
+        // CRIANDO UM ARRAY
+        let skills = ["Javascript", "ReactJS", "React Native"];
+        
+
+        // CRIANDO UMA FUNÇÃO
+        function temHabilidade(skill) {
+            // VERICANDO SE EXISTE HABILIDADE
+            return (skills.indexOf(skill) == -1 ) ? false : true;
+        }
+
+        // SET TIMEOUT
+        setTimeout(() => {
+            // CHAMANDO A FUNÇÃO
+            console.log("Possui Habilidade '" + skill + "' : ",  temHabilidade(skill));
+        }, 2000);
+
+    </script>
+</body>
+
+</html>

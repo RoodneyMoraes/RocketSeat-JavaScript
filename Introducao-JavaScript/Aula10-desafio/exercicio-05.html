@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // CRIANDO UM ARRAY DE OBJETOS
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        //  CRIANDO UMA FUNÇÃO
+        function descricaoUsuario(usuarios) {
+            // INICIANDO VARIAVEIS
+            let frases = [];
+            // PERCORRENDO UM VETOR
+            for (let usuario of usuarios) {
+                // CRIANDO VARIAVEIS DENTRO DA FUNÇÃO
+                let nome = usuario.nome;
+                let habilidades = usuario.habilidades.join([separador = ', '])
+                //  CRIANDO A FRASE DO USUARIO   
+                let fraseUsuario = "O " + nome + " possui as habilidades: " + habilidades + ".";
+
+                // COLOCANDO AS FRASES DO ARRAY
+                frases.push(fraseUsuario)
+
+            }
+
+            return frases
+        }
+
+        // SET TIMEOUT
+        setTimeout(() => {
+            // EXIBINDO O RESULTADO DA FUNÇÃO
+            console.log("Resultado da Função: ", descricaoUsuario(usuarios));
+        }, 2000);
+
+
+    </script>
+</body>
+
+</html>

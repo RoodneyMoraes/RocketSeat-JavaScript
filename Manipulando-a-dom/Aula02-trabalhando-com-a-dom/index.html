@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <!-- CRIANDO ELEMENTOS HTML -->
+    <div id="app">
+        <input type="text" name="nome">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <!-- JS -->
+    <script>
+        // RECUPERANDO ELEMENTOS DA DOM
+        // let inputElement = document.querySelectorAll("input");
+        // let inputElement = document.querySelector("input[name=nome");
+        // let inputElement = document.querySelector("div#app input");
+        // let inputElement = document.getElementById("nome");
+        // let inputElements = document.getElementsByTagName("input");
+        // let inputElements = document.getElementsByClassName("nome");
+        
+        // RECUPERANDO ELEMENTOS DA DOM
+        let btnElement = document.querySelector("button.botao");
+        let inputElement = document.querySelector("input[name=nome]");
+
+        // CHAMANDO A FUNÇÃO NATIVA DO JS
+        btnElement.onclick = () => {
+            // RECUPERANDO O VALOR DIGITADO
+            let text = inputElement.value; 
+            // SET TIMEOUT
+            setTimeout(() => {
+                alert("Texto digitado: "+  text);
+            }, 1000);
+        }
+
+        // LOG
+        console.log(inputElement.value);
+        
+    </script>
+</body>
+
+</html>

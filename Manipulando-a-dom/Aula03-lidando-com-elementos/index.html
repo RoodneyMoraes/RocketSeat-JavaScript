@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <!-- CRIANDO ELEMENTOS HTML -->
+    <div id="app">
+        <input id="nome" type="text" name="nome">
+    </div>
+
+    <!-- JS -->
+    <script>
+        // CRIANDO  E RECUPERNADO ELEMENTOS HTML COM JS
+        let linkElement = document.createElement('a');
+        let containerElement = document.querySelector('#app');
+        let inputElement = document.querySelector('#nome');
+
+        // CRIANDO ATRIBUTOS POR JS
+        linkElement.setAttribute('href', 'http://www.google.com.br');
+        linkElement.setAttribute('target', '_blank');
+        linkElement.setAttribute('title', 'Google');
+        let textElement = document.createTextNode('Acessar Google');
+
+        // POSICIONANDO OS ELEMENTOS DENTRO DA DOM
+        linkElement.appendChild(textElement);
+        containerElement.appendChild(linkElement);
+        containerElement.removeChild(inputElement);
+
+    </script>
+</body>
+
+</html>

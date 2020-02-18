@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+        
+        // VARIAVEIS
+        let anosEstudo = 1;
+
+        // CRIANDO UMA FUNÇÃO
+        function experiencia(anos) {
+            //  VARIAVEL DA FUNÇÃO
+            let resultado = "";
+            
+            // VALIDADO A EXPERIENCIA DO USUÁRIO
+            if (anos >= 0 && anos < 2) {
+                resultado = "Iniciante";
+            } else if (anos >= 1 && anos <= 3) {
+                resultado = "Intermediário";
+            } else if (anos > 3 && anos <= 6) {
+                resultado = "Avançado";
+            } else {
+                resultado = "Jedi Master";
+            }
+
+            return resultado;
+        }
+
+        // SET TIMEOUT
+        setTimeout(() => {
+            console.log("Com " + anosEstudo + " anos de experiencia, você está no nível :", experiencia(anosEstudo));
+        }, 2000);
+
+    </script>
+</body>
+
+</html>

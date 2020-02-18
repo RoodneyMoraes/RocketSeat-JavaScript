@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // CRIANDO VARIAVEIES
+        let x = 33;
+        let y = 321;
+
+        // CRIANDO UMA FUNÇÃO
+        function pares(x, y) {
+            // CRIANDO UM ARRAY DENTRO DA FUNÇÃO
+            let pares = [];
+            // CRIANDO UM LAÇO DE REPETIÇÃO
+            for (let i = x; i <= y; i++) {
+                if ((i % 2) == 0) {
+                    pares.push(i);
+                }
+            }
+            return pares;
+        }
+
+        //  SET TIMEOUT
+        setTimeout(() => {
+            // RESULTADO DA FUNÇÃO
+            console.log("Durante o intervalo de números entre (" + x + " e " + y + ") os números pares são: ", pares(x, y));
+        }, 2000);
+
+    </script>
+</body>
+
+</html>

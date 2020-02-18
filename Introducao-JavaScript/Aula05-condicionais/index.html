@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+        // TRABALHANDO COM CONDIÇÕES IF
+        function retornaSexo(sexo) {
+            if (sexo == "M") {
+                return "Masculino";
+            } else if (sexo == "F") {
+                return "Feminino";
+            } else {
+                return "Opção Invalida!";
+            }
+        }
+
+        var resultado = retornaSexo("F");
+
+        console.log("Resultado da Condição IF: ", resultado);
+
+
+        // TRABALHANDO COM SWITCH CASE
+        function retornaCor(cor) {
+            switch (cor) {
+                case "M":
+                    return "Marrom";
+                    break;
+                case "A":
+                    return "Amarelo";
+                    break;
+                case "V":
+                    return "Verde";
+                    break;
+                case "G":
+                    return "Gelo";
+                    break;
+                case "R":
+                    return "Rosa";
+                    break;
+                default:
+                    return "Cor não informada dentro do Switch Case!"
+                    break;
+            }
+        }
+
+        var resultadoCor = retornaCor("V");
+
+        console.log("Resultado do Switch Case: ", resultadoCor);
+
+    </script>
+</body>
+
+</html>

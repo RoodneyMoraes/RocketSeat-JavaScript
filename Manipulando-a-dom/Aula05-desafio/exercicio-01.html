@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // CRIANDO ELEMENTOS HTML
+        let containerElement = document.createElement('div');
+        let buttonElement = document.createElement('button');
+        let textElement = document.createTextNode('Criar quadrado');
+        
+        // RECUPERANDO ELEMENTOS DA DOM
+        let bodyElement = document.querySelector('body');
+
+        // COLOCANDO ATRIBUTOS NOS ELEMENTOS
+        containerElement.setAttribute('id', 'app');
+        buttonElement.setAttribute('class', 'button');
+        buttonElement.setAttribute('id', 'botao');
+
+        // POSICIONADO ELEMENTOS
+        bodyElement.appendChild(containerElement);
+        containerElement.appendChild(buttonElement);
+        buttonElement.appendChild(textElement);
+
+        // SET TIMEOUT
+        setTimeout(() => {
+            // RECUPERANDO ELEMENTO DA DOM
+            let button = document.querySelector('button#botao');
+    
+            // CRIANDO EVENTOS  DE CLICK JS
+            botao.onclick = () => {
+
+                // CRIANDO UM ELEMENTO (QUADRADO)
+                let box = document.createElement('div');
+
+                // ESTILIZANDO COM JS
+                box.style.width = '100px';
+                box.style.height = '100px';
+                box.style.margin = '15px';
+                box.style.backgroundColor = '#f00';
+
+                // POSICIONADO ELEMENTOS
+                containerElement.appendChild(box);
+            }
+        }, 500);
+
+    </script>
+</body>
+
+</html>

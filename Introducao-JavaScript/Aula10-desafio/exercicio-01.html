@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // CRIANDO UM OBJETO
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        // CRIANDO UMA FUNÇÃO
+        function exibeDados(endereco) {
+            return "O usuário mora em " + endereco.cidade + "/" + endereco.uf + ", no bairro Centro, na rua '" +   endereco.rua + "' com nº " + endereco.numero + ".";
+        }
+
+        // SET TIMEOUT
+        setTimeout(() => {
+            console.log("Resultado da função: ", exibeDados(endereco));     
+        }, 3000);
+
+
+    </script>
+</body>
+
+</html>
