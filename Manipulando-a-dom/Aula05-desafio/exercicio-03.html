@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // CRIANDO ELEMENTOS HTML
+        let containerElement = document.createElement('div');
+        let ulElement = document.createElement('ul');
+
+        // RECUPERANDO ELEMENTOS DA DOM
+        let bodyElement = document.querySelector('body');
+
+        // COLOCANDO ATRIBUTOS NOS ELEMENTOS
+        containerElement.setAttribute('id', 'app');
+
+        // ARRAY DE NOMES
+        let nomes = ["Diego", "Gabriel", "Lucas"];
+
+        // POSICIONADO ELEMENTOS
+        bodyElement.appendChild(containerElement);
+        containerElement.appendChild(ulElement);
+
+        // PERCORRENDO UM ARRAY
+        for (let nome of nomes) {
+
+            // CRIANDO ELEMENTOS HTML
+            let liElement = document.createElement('li');
+            let textElement = document.createTextNode(nome);
+
+            // POSICIONADO ELEMENTOS
+            ulElement.appendChild(liElement);
+            liElement.appendChild(textElement);
+
+        }
+    </script>
+</body>
+
+</html>

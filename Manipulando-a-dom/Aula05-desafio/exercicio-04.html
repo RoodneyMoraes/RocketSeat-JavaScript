@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercícios</title>
+</head>
+
+<body>
+    <!-- JS -->
+    <script>
+
+        // CRIANDO ELEMENTOS HTML
+        let containerElement = document.createElement('div');
+        let inputElement = document.createElement('input');
+        let buttonElement = document.createElement('button');
+        let ulElement = document.createElement('ul');
+        let textElementButton = document.createTextNode("Adicionar");
+
+
+        // RECUPERANDO ELEMENTOS DA DOM
+        let bodyElement = document.querySelector('body');
+
+        // COLOCANDO ATRIBUTOS NOS ELEMENTOS
+        containerElement.setAttribute('id', 'app');
+        inputElement.setAttribute('id', 'nome');
+        inputElement.setAttribute('name', 'nome');
+        inputElement.setAttribute('type', 'text');
+        buttonElement.setAttribute('id', 'adicionar');
+
+        // ARRAY DE NOMES
+        let nomes = ["Diego", "Gabriel", "Lucas"];
+
+        // POSICIONADO ELEMENTOS
+        bodyElement.appendChild(containerElement);
+        containerElement.appendChild(inputElement);
+        containerElement.appendChild(buttonElement);
+        buttonElement.appendChild(textElementButton);
+        containerElement.appendChild(ulElement);
+
+        // ESTILIZANDO COM JS
+        buttonElement.style.margin = '15px';
+
+        // PERCORRENDO UM ARRAY
+        for (let nome of nomes) {
+
+            // CRIANDO ELEMENTOS HTML
+            let liElement = document.createElement('li');
+            let textElement = document.createTextNode(nome);
+
+            // POSICIONADO ELEMENTOS
+            ulElement.appendChild(liElement);
+            liElement.appendChild(textElement);
+
+        }
+
+        // EVENTO DE CLICK EM ADICIONAR
+        buttonElement.onclick = () => {
+            // RECUPERANDO UM VALOR DO INPUT
+            let inputValue = document.getElementById('nome').value;
+            
+            // CRIANDO ELEMENTOS HTML
+            let liElement = document.createElement('li');
+            let textElementInput = document.createTextNode(inputValue);
+
+            // POSICIONADO ELEMENTOS
+            ulElement.appendChild(liElement);
+            liElement.appendChild(textElementInput);
+
+            // LIMPANDO UM INPUT
+            document.getElementById('nome').value = "";
+
+            // MOSTRANDO UM ALERT DO ITEM QUE FOI INSERIDO
+            alert("Item " + inputValue + ", adicionado com sucesso!")
+            
+        }
+    </script>
+</body>
+
+</html>
