@@ -10,8 +10,11 @@ let todos = [
     "Acessar comunidade da Rockeatseat"
 ];
 
-// CRIANDO FUNÇOES
+// FUNÇOES PARA LISTAR OS ITENS
 function renderTodos(todos) {
+    // LIMPANDO TODO CONTEUDO DE UM ELEMENTO HTML
+    listElement.innerHTML = "";
+    // PERCORRENDO UM ARRAY
     for (todo of todos) {
         // CRIANDO ELEMENTOS HTML
         let todoElement = document.createElement("li");
@@ -21,6 +24,23 @@ function renderTodos(todos) {
         todoElement.appendChild(todoText);
         listElement.appendChild(todoElement);
     }
+}
+
+// FUNÇÃO PARA ADICIONAR UM NOVO ITEM
+function addTodo() {
+    // RECUPERANDO UM ELEMENTO HTML
+    let todoText = inputElement.value;
+    // INSERINDO UM NOVO ITEM NO ARRAY
+    todos.push(todoText);
+    // LIMPANDO O INPUT
+    inputElement.value = "";
+    // RENDERIZANDO NOVAMENTE A LISTA
+    renderTodos(todos);
+}
+
+// EVENTO ONCLICK NO BOTAO
+buttonElement.onclick = () =>{
+    addTodo();
 }
 
 // CHAMANDO AS FUNÇÃO
